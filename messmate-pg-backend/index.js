@@ -12,7 +12,8 @@ const app = express();
 
 // ------------------ MIDDLEWARE ------------------
 app.use(cors({
-  origin: "messmate-taupe.vercel.app",
+  origin: "https://messmate-taupe.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 
