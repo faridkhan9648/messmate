@@ -11,7 +11,11 @@ const Mess = require('./models/Mess');
 const app = express();
 
 // ------------------ MIDDLEWARE ------------------
-app.use(cors());
+app.use(cors({
+  origin: "messmate-taupe.vercel.app",
+  credentials: true
+}));
+
 app.use(express.json());
 
 // ------------------ ROUTES ------------------
