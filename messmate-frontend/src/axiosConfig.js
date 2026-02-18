@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:4000' // backend API
+  baseURL: 'https://messmate-1g33.onrender.com' // backend API
 });
 
 instance.interceptors.request.use((config) => {
