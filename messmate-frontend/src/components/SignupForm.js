@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../axiosConfig';
 
 const SignupForm = () => {
   const [form, setForm] = useState({
@@ -16,7 +16,7 @@ const SignupForm = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:4000/auth/register', form);
+      await api.post('/auth/register', form);
       alert('Registration successful. Please log in.');
     } catch (err) {
       console.error("REGISTER ERROR:", err.response?.data || err.message);
@@ -73,6 +73,7 @@ const SignupForm = () => {
 };
 
 export default SignupForm;
+
 
 
 
